@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h2>Tic Tac Toe</h2>
+    <h2 class="title">Tic <span class="mid-title">Tac</span> Toe</h2>
     <h5>Enter players name and click start</h5>
     <div class="container">
         <form class="player-info">
             <div>
                 <label for="player1">Player 1 (X)</label>
-                <input type="text" id="player1" placeholder="Name of Player 1"
+                <input type="text" id="player1" placeholder="Name of Player 1">
             </div>
             <div>
                 <label for="player2">Player 2 (O)</label>
@@ -22,7 +22,7 @@
             </div>
             <button type="submit" class="btn">Play</button>
         </form>
-        <div class="hidden">
+        <div class="place hidden">
         <div class="game-status">
             <h4>Board:</h4>
         </div>
@@ -43,6 +43,6 @@
         <button id="reset" class="btn">Restart</button>
     </div>
     </div>
-    <script src="ticTacToe.js"></script>
+    <script src="js-ticTacToe.js"></script>
 </body>
 </html>
