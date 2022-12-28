@@ -72,8 +72,12 @@ const gameLoop = (() =>{
 		const status = document.querySelector('.game-status');
 		if(currentPlayer.name !== '') {
 			status.textContent = `${currentPlayer.name}'s Turn`;
+            status.style.color = 'white';
+            status.style.fontSize = 'large';
 		} else {
 			status.textContent = 'Board: ';
+            status.style.color = 'white';
+            status.style.fontSize = 'large';
 		}
         
         board.boardCells.addEventListener('click', (e) => {
@@ -85,9 +89,13 @@ const gameLoop = (() =>{
 				const winStatus = board.checkWin();
 				if(winStatus === 'Tie') {
 					status.textContent = 'Tie!';
+                    status.style.color = 'white';
+                    status.style.fontSize = 'large';
 				} else if(winStatus === null) {
                     switchTurn();
-                    status.textContent = `${currentPlayer,name}'s turn`;
+                    status.textContent = `${currentPlayer.name}'s turn`;
+                    status.style.color = 'white';
+                    status.style.fontSize = 'large';
                 } else {
                     status.textContent = `Winner is ${currentPlayer.name}`;
                     board.reset();
